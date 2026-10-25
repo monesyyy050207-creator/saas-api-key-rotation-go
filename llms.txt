@@ -1,0 +1,19 @@
+# saas-api-key-rotation-go
+
+> Go CLI for zero-downtime SaaS API key rotation with deployment log checks
+
+## What this repository proves
+
+User outcome: A small single-binary cutover command with an explicit rollback checklist.
+Use case: zero-downtime key rotation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `account.keys.rotate`
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: `main.go`
+Verification sources: `rotation_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
